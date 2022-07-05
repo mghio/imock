@@ -41,7 +41,7 @@ public class InvocationDetail<T> {
     InvocationDetail<?> behaviour = (InvocationDetail<?>) o;
     return Objects.equals(attachedClassName, behaviour.attachedClassName) &&
         Objects.equals(methodName, behaviour.methodName) &&
-        Arrays.equals(arguments, behaviour.arguments);
+        Arrays.deepEquals(arguments, behaviour.arguments);
   }
 
   @Override
